@@ -11,7 +11,7 @@ from create_shape import create_circle
 
 
 parser = ConfigParser(interpolation=ExtendedInterpolation())
-parser.read('/home/mohamed/Projects/DGO/work_dir/dev.ini')
+parser.read('dev.ini')
 
 with open(parser.get('data', 'data_settings')) as json_file:
     data_settings = json.load(json_file)
