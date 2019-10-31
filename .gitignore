@@ -1,0 +1,28 @@
+# data
+
+data_sets/
+work_dir/data/
+
+# python
+
+*__pycache__/
+
+#vim
+
+tags
+
+# config
+
+*.ini
+*.json
+config_*.py
+
+# linux
+
+*.directory
+*.swp
+
+# misc
+
+*.txt
+*geospatial*
