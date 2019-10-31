@@ -8,10 +8,11 @@ from shapely import wkt
 
 from data_funcs import DataFuncs
 from create_shape import create_circle
+from secret import filepath
 
 
 parser = ConfigParser(interpolation=ExtendedInterpolation())
-parser.read('dev.ini')
+parser.read(f'{filepath}/dev.ini')
 
 with open(parser.get('data', 'data_settings')) as json_file:
     data_settings = json.load(json_file)
@@ -39,7 +40,7 @@ if __name__ == "__main__":
     ]].copy()
 
 #-----------------------------------------------------------------------------#
-    # OTTAWA LIM 0 TO 17 YEARS OLD PERCENTAGE VS TOTAL AMOUNT 
+    # LIM 0 TO 17 YEARS OLD PERCENTAGE VS TOTAL AMOUNT 
     cat_1 = cat_2 = data_settings['categories'][1]
     div_by = data_settings['categories'][0]
     val_1 = f'total - {cat_1}'
@@ -67,7 +68,7 @@ if __name__ == "__main__":
 
         lim = DataFuncs()
         lim_df, lim_json = lim.extract_census_feature(df_1b, df_2, epsg_in,
-                                                      epsg_out)
+                                                      geo_id, epsg_out)
 
         lim_df = lim_df[lim_df['percent'] < 1]
         lim_df['percent'] = lim_df['percent'].apply(lambda x: round(x, 2))

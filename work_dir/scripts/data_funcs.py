@@ -84,8 +84,8 @@ class DataFuncs(object):
         return (df_1b, j)
 
     def plot_census_map(self, df_1, j, feature_value, colorscale,
-                               mapbox_style, geo_id, lat, lon, renderer,
-                               mapbox_style, mapbox_token=None):
+                        mapbox_style, geo_id, lat, lon, renderer,
+                        mapbox_token=None):
         """
         mapbox_token: str
         """
