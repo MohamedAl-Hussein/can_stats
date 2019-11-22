@@ -30,3 +30,4 @@ config_*.py
 *.txt
 *geospatial*
 *secret*
+clean*
