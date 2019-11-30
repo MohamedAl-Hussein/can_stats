@@ -1,0 +1,5 @@
+
+['remote "dgo-remote"']
+url = ../~.dvc-storage
+[core]
+remote = dgo-remote
