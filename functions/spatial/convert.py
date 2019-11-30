@@ -1,6 +1,6 @@
 import geopandas as gpd
 import matplotlib.pyplot as plt
-from shapely import geometry, wkt
+from shapely import wkt
 
 
 gpd.options.display_precision = 16
@@ -94,17 +94,4 @@ class GeoPandasAnalysis(object):
             point_area,
             f'{dir_name}{shp_savename}'
         )
-
-
-def point_to_polygon(p):
-    """
-    Convert array of coordinates into a polygon to use as geometry column
-    in dataframe.
-    NOTE: column name must be geometry
-
-    p: array containing points
-    """
-
-    poly = geometry.Polygon(zip(p[0], p[1]))
-    return poly
 

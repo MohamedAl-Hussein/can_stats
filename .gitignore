@@ -35,7 +35,4 @@ config_*.py
 # misc
 
 *.txt
-*geospatial*
-*secret*
-clean*
-club*
+dgo/

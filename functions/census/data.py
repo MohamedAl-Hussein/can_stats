@@ -1,6 +1,5 @@
 import json
 import geopandas as gpd
-import pandas as pd
 import plotly.graph_objs as go
 import plotly.io as pio
 from shapely import wkt

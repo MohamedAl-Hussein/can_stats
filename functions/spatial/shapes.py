@@ -1,20 +1,16 @@
 import numpy as np
 import json
 import geog
-import shapely.geometry
 
 
 def create_circle(x, y, radius, n_points=360):
-    p = shapely.geometry.Point([x, y])
+    p = geometry.Point([x, y])
     n_points = 360
     d = radius * 1000
     angles = np.linspace(0, 360, n_points)
     polygon = geog.propagate(p, angles, d)
 
-    shape = json.dumps(
-        shapely.geometry.mapping(shapely.geometry.Polygon(polygon))
-    )
-
+    shape = json.dumps(geometry.mapping(geometry.Polygon(polygon)))
     shape = json.loads(shape)
 
     lon = list()
