@@ -5,10 +5,17 @@ work_dir/data/
 *.tsv
 *.ods
 *.csv
+*.shx
+*.dbf
+*.shp
+*.prj
+*.cpg
+*.html
 
 # python
 
 *__pycache__/
+*.ipy
 
 #vim
 
@@ -31,3 +38,4 @@ config_*.py
 *geospatial*
 *secret*
 clean*
+club*
